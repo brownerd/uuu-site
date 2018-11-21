@@ -1,0 +1,24 @@
+{
+  "name": "uuu",
+  "version": "1.0.0",
+  "description": "uuu theme, syntax and kit assets",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently npm:dev-*",
+    "dev-pug" : "pug 'src/views/pages' --out 'dist' --watch",
+    "dev-stylus" : "stylus 'src/stylus/main.styl' --out 'dist' --sourcemap --watch",
+    "dev-bs" : "browser-sync start --server 'dist' --files 'dist' --browser 'google chrome canary'",
+    "prebuild": "rm -r dist && mkdir dist",
+    "build": "",
+    "deploy": "aws s3 cp dist/ s3://uuu.works/ --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.3.1",
+    "browser-sync": "^2.26.3",
+    "concurrently": "^4.1.0",
+    "pug": "^2.0.3",
+    "stylus": "^0.54.5"
+  }
+}

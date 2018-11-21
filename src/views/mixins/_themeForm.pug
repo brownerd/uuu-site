@@ -1,0 +1,25 @@
+mixin themeForm(theme = {})
+  form(action="/themes/add" method="POST" autocomplete="off")
+    div
+      label(for="name") Name
+      input(type="text" name="name")
+
+    div
+      label(for="description") Description
+      textarea(name="description")
+
+    div
+      label(for="themejson") Theme JSON
+      textarea(name="themejson")
+
+    - const choices = ['minimal', 'sports', 'film']
+    ul.tags
+      each choice in choices
+        .tag  
+          input(type="checkbox" id=choice value=choice name="tags")
+
+          label(for=choice) #{choice}
+
+    input(type="submit" value="Save" class="button")
+
+    

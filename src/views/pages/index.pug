@@ -1,0 +1,46 @@
+extends ../layout/base
+
+block feature
+  .feature
+    .logo
+      //-img(src="./uuu.svg")
+      svg.uuusvg(viewBox="0 0 127 51", xmlns='http://www.w3.org/2000/svg')
+        path(d='M.148.545h39.31v31.27c0 10.91-7.9 18.339-19.655 18.339S.148 42.724.148 31.814V.546zM43.502.545h39.31v31.27c0 10.91-7.899 18.339-19.654 18.339-11.803 0-19.703-7.43-19.703-18.34V.546h.047zM86.81.545h39.358v31.27c0 10.91-7.9 18.339-19.656 18.339-11.802 0-19.702-7.43-19.702-18.34V.546z')
+      h2 I hacked ATOM so UUU can hack your own SYNTAX and UI theme within minutes 
+
+block content
+  .content
+    .content__container
+      h2 Get started
+      ul.started
+        li Open your terminal and run the line below
+        li.snippet apm install uuu-ui uuu-syntax uuu-kit
+        li Fire up <span class="code">ATOM</span> > Goto <span class="code">Preferences</span> > Goto <span class="code">Themes</span> and enable UUU-ui and UUU-syntax
+        li Click on the Settings icon (gear) get UUUR style on! 
+
+      h2 Features
+      ul.grid
+        li Pac-Man Cursor <div class="pacman"></div>
+        li Punk Gutter
+        li Full Theme control from settings
+        li Import/Export themes
+        li Save your own themes
+        li Quickly switch between themes
+        li Sync Syntax and UI font sizes
+        li Hack any theme you want
+
+      h2 Included Themes (all hackable)
+      ul.grid
+        li MelowDrama
+        li Amir
+        li Schmaterial
+        li DarkEarth
+        li Brownerd
+        li SuperNES
+        li TMNT - Donatello
+        li MiamiVice
+        li Typographical
+        li BuckNaked
+
+
+//- script(src="/main-bundle.js")
