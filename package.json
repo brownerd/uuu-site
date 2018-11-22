@@ -4,12 +4,15 @@
   "description": "uuu theme, syntax and kit assets",
   "main": "index.js",
   "scripts": {
+    "test": "echo 'Error: no test specified'",
     "dev": "concurrently npm:dev-*",
     "dev-pug" : "pug 'src/views/pages' --out 'dist' --pretty --watch",
     "dev-stylus" : "stylus 'src/stylus/main.styl' --out 'dist' --sourcemap --watch",
     "dev-bs" : "browser-sync start --server 'dist' --files 'dist' --browser 'google chrome canary'",
     "clean": "rm -r dist && mkdir dist",
-    "build": "pug '/src/views/pages' --out 'dist' && stylus '/src/stylus/main.styl' --out 'dist' --compress",
+    "build": "concurrently npm:build-*",
+    "build-pug" : "pug 'src/views/pages' --out 'dist'",
+    "build-stylus" : "stylus 'src/stylus/main.styl' --out 'dist' --compress",
     "deploy": "aws s3 cp dist/ s3://uuu.works/ --recursive"
   },
   "author": "",
