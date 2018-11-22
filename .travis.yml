@@ -8,21 +8,23 @@ cache:
 # install:
 #   - npm install
 
-before_script:
-  - npm install -g pug-cli
+# before_script:
+#   - npm install -g pug-cli
 
-script:
-  - mkdir dist
-  - ls dist
-  - npm run build-stylus
-  - ls dist
-  - npm run build-pug
-  - ls dist
+# script:
+#   - npm run build
+  # - mkdir dist
+  # - ls dist
+  # - npm run build-stylus
+  # - ls dist
+  # - npm run build-pug
+  # - ls dist
   # - npm test
   
 
 before_deploy:
-  - npm install -g travis-ci-cloudfront-invalidation
+  - npm install -g travis-ci-cloudfront-invalidation pug-cli
+  - npm run build
   # - npm global add travis-ci-cloudfront-invalidation
   # - npm install -g travis-ci-cloudfront-invalidation pug stylus
 
