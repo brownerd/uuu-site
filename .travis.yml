@@ -2,16 +2,17 @@ language: node_js
 node_js:
   - '8'
 cache:
-  # npm: true
+  npm: true
   directories:
     - node_modules
-# script:
-#   - npm test
+script:
+  - npm test
+install: 
+  - npm install -g travis-ci-cloudfront-invalidation pug stylus concurrently
 before_deploy:
   # - npm global add travis-ci-cloudfront-invalidation
-  - npm install -g travis-ci-cloudfront-invalidation pug stylus
-  - pug 'src/views/pages' --out 'dist'
-  - stylus 'src/stylus/main.styl' --out 'dist' --compress
+  # - npm install -g travis-ci-cloudfront-invalidation pug stylus
+  - npm run build
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
