@@ -8,7 +8,7 @@
     "dev-pug" : "pug 'src/views/pages' --out 'dist' --pretty --watch",
     "dev-stylus" : "stylus 'src/stylus/main.styl' --out 'dist' --sourcemap --watch",
     "dev-bs" : "browser-sync start --server 'dist' --files 'dist' --browser 'google chrome canary'",
-    "prebuild": "rm -r dist && mkdir dist",
+    "clean": "rm -r dist && mkdir dist",
     "build": "concurrently npm:build-*",
     "build-pug" : "pug 'src/views/pages' --out 'dist'",
     "build-stylus" : "stylus 'src/stylus/main.styl' --out 'dist' --compress",
