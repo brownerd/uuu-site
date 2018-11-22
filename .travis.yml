@@ -20,10 +20,9 @@ before_script:
 script:
   - mkdir dist
   - npm run build
+  - ls dist
   # - mkdir dist
-  # - ls dist
   # - npm run build-stylus
-  # - ls dist
   # - npm run build-pug
   # - ls dist
   # - npm test
@@ -31,8 +30,6 @@ script:
 
 before_deploy:
   - npm install -g travis-ci-cloudfront-invalidation
-  # - npm global add travis-ci-cloudfront-invalidation
-  # - npm install -g travis-ci-cloudfront-invalidation pug stylus
 
 deploy:
   provider: s3
