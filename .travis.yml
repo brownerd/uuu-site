@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - '8'
 cache:
-  npm: true
+  # npm: true
   directories:
     - node_modules
 # script:
