@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "stable"
+  - "8"
 cache:
   npm: true
   directories:
@@ -12,8 +12,12 @@ cache:
 #   - npm install -g pug stylus concurrently
 
 script:
+  - mkdir dist
+  - ls dist
+  - npm run build-stylus
+  - ls dist
   # - npm test
-  - npm run build-pug
+  
 
 before_deploy:
   - npm install -g travis-ci-cloudfront-invalidation
