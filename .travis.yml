@@ -8,13 +8,14 @@ cache:
 # install:
 #   - npm install
 
-# before_script:
-#   - npm install -g pug stylus concurrently
+before_script:
+  - npm install -g pug-cli
 
 script:
   - mkdir dist
   - ls dist
   - npm run build-stylus
+  - ls dist
   - npm run build-pug
   - ls dist
   # - npm test
