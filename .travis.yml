@@ -10,7 +10,8 @@ cache:
 before_deploy:
   # - npm global add travis-ci-cloudfront-invalidation
   - npm install -g travis-ci-cloudfront-invalidation pug stylus
-  - npm run build
+  - pug 'src/views/pages' --out 'dist'
+  - stylus 'src/stylus/main.styl' --out 'dist' --compress
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
