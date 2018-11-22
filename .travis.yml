@@ -10,7 +10,7 @@ cache:
 before_deploy:
   # - npm global add travis-ci-cloudfront-invalidation
   - npm install -g travis-ci-cloudfront-invalidation
-  # - npm install
+  - npm install pug
   - npm run build
 deploy:
   provider: s3
