@@ -11,7 +11,7 @@
     "dev-bs" : "browser-sync start --server 'dist' --files 'dist' --browser 'google chrome canary'",
     "clean": "rm -r dist && mkdir dist",
     "build": "concurrently npm:build-*",
-    "build-pug" : "pug 'src/views/pages/index.pug' --out 'dist'",
+    "build-pug" : "pug 'src/views/pages/' --out 'dist'",
     "build-stylus" : "stylus 'src/stylus/main.styl' --out 'dist' --compress",
     "deploy": "aws s3 cp dist/ s3://uuu.works/ --recursive"
   },
