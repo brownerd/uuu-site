@@ -1,6 +1,12 @@
 language: node_js
 node_js:
-  - "stable"
+  # latest node version
+  - "node"
+  # latest stable release
+  # - "lts/*"
+  # Specific version
+  # - "8"
+
 cache:
   npm: true
   directories:
