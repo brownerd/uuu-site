@@ -15,6 +15,7 @@ script:
   - mkdir dist
   - ls dist
   - npm run build-stylus
+  - npm run build-pug
   - ls dist
   # - npm test
   
